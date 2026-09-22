@@ -1,0 +1,99 @@
+\begin{frame}[fragile]{Encodage basique}
+Le XML repose sur trois principes~:
+\begin{itemize}
+    \item Les balises sont appelées \textbf{éléments};
+    \item Les éléments sont imbriqués;
+    \item L'imbrication est sous forme d'arborescence
+\end{itemize}
+\vspace{1em}
+
+\begin{tabular}{c}
+    \begin{lstlisting}[numbers=none]
+    <elementParent>
+        <elementEnfant> Texte </elementEnfant>
+    </elementParent>
+    \end{lstlisting}
+\end{tabular}
+
+\end{frame}
+
+\begin{frame}[fragile]{Encodage basique}
+\begin{center}
+    \begin{tabular}{c}
+    \begin{lstlisting}[numbers=none]
+    <Paragraphe>
+        <Phrase> 
+            <mot> Toto </mot>
+        </Phrase>
+    </Paragraphe>
+    \end{lstlisting}
+\end{tabular}
+\end{center}
+    
+\end{frame}
+
+\begin{frame}{Éléments et attributs}
+\begin{block}{}
+    \textbf{Élément =} Le contenu. Doit toujours être entouré de deux balises du même nom.\\
+    Ex: \textcolor{blue}{<paragraphe></paragraphe>} \textrightarrow{} l'élément est le paragraphe.\\
+
+    Les éléments ne doivent pas se chevaucher.\\
+    Ex: \textcolor{blue}{<paragraphe>}\textcolor{BurntOrange}{<mot>}\textcolor{blue}{</paragraphe>}\textcolor{BurntOrange}{</mot>}
+\end{block}
+
+\begin{block}{}
+    \textbf{Attribut =} Caractéristique du contenu. Ne peut pas réutilisé deux fois le même attribut.\\ 
+    Ex: \textcolor{blue}{<paragraphe} \textcolor{red}{numero="1"}\textcolor{blue}{></paragraphe>} \textrightarrow{} c'est le premier paragraphe.
+\end{block}
+    
+\end{frame}
+
+\begin{frame}{Une structure bien formée}
+
+Un encodage XML est dit \textcolor{red}{\textbf{bien formé}} s'il respecte les règles de balisage ci-dessous~:
+
+\begin{itemize}
+    \item Chaque balise doit avoir une balise de fin (une balise ouvrante et une balise fermante)~;
+    \item Les éléments ne doivent pas se chevaucher et doivent bien s'imbriquer~;
+    \item Un élément ne peut avoir qu'un seul même attribut~;
+    \item Un seul élément racine (on doit avoir un seul élément qui englobe tous les autres).
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Déclaration XML}
+\begin{lstlisting}
+        <?xml version="1.0" encoding="UTF-8"?>
+    \end{lstlisting}
+
+\begin{itemize}
+    \item La déclaration XML s'écrit en début de document
+    \item Elle indique la version utilisée de XML (toujours la version 1.0) et l'encodage du texte.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{Autres commandes à connaître}
+\begin{block}{Commenter le texte}
+    \begin{lstlisting}
+        <!-- on écrit son commentaire -->
+    \end{lstlisting}
+\end{block}
+
+\begin{block}{Les entités}
+
+\begin{verbatim}
+    &entité;
+\end{verbatim}
+Permet d'utiliser des caractères interdits en XML comme le \&.
+    
+    
+\end{block}
+    
+\end{frame}
+
+\begin{frame}{Exercices}
+    \url{https://pad.libreon.fr/eoi6u4UjRhO-XGzRv_bPzg?both}
+\end{frame}
+

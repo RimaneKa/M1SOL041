@@ -1,0 +1,105 @@
+\documentclass[10pt]{beamer}
+\usetheme{metropolis}
+
+\usepackage[utf8]{inputenc}
+\usepackage[russian,french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{
+    left=2.5mm,
+    right=2.5mm,
+    top=0mm,
+    bottom=0mm
+}
+\usepackage{amssymb} % pour \blackdiamond
+\usepackage{tikz}
+\usepackage{graphicx,animate}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{listings}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{minted}
+\usepackage{hyperref}
+
+\lstset{%
+basicstyle=\small\ttfamily,%
+columns=flexible,%
+breaklines=true,%
+language=xml,%
+numberstyle=\footnotesize,%
+numbers=left,%
+tabsize=2,%
+title=\lstname,%
+escapeinside={\%*}{*)},%
+breaklines=true,%
+breakatwhitespace=true,%
+% framextopmargin=1em,%
+% framexbottommargin=1em,%
+moredelim=[s][\bfseries\color{blue}]{<}{\ },%
+moredelim=[s][\bfseries\color{blue}]{</}{>},%
+morecomment=[s]{<?}{?>},%
+morecomment=[s]{<!--}{-->},%
+commentstyle=\color{ForestGreen},%
+stringstyle=\color{blue},%
+extendedchars=false,%
+inputencoding=utf8%
+}
+
+\newcommand{\replacementchar}{%
+  \tikz[baseline=-0.6ex]{
+    %\node[inner sep=0pt] (d) {\Large$\blackdiamond$};
+    \node[inner sep=0pt] (d) {\Large$\blacksquare$};
+    \node[white, font=\scriptsize\bfseries] at (d.center) {?};
+  }%
+}
+\usepackage{tabularx}
+%\usepackage[style=alphabetic,citestyle=authoryear]{biblatex}
+%\addbibresource{bibliographie.bib}
+
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+\title{M1SOL041: Représentation et traitement des documents électroniques\\
+Cours 2: Introduction au XML et au XML-TEI}
+
+\date{}
+\author{Marine Tiger\\  \quad {marine.tiger@sorbonne-universite.fr\\}}
+
+\institute{Littératures françaises et comparée ED19, CELLF, Sorbonne Université}
+
+\begin{document}
+\maketitle
+\setbeamertemplate{section in toc}[sections numbered]
+
+
+\begin{frame}{Déroulé des séances}
+
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% Beamer presentation requires \usepackage{colortbl} instead of \usepackage[table,xcdraw]{xcolor}
+\begin{table}[]
+\begin{tabular}{|
+>{\columncolor[HTML]{EFEFEF}}l |
+>{\columncolor[HTML]{FFFFFF}}l |}
+\hline
+\textbf{22 septembre} & Introduction en XML et XML-TEI     \\ \hline
+\textbf{29 septembre} & Structurer un document en TEI      \\ \hline
+\textbf{06 octobre}   & XPath         \\ \hline
+\textbf{13 octobre}   & XLST                               \\ \hline
+\textbf{20 octobre}   & DST + Initiation JSON                    \\ \hline
+\textbf{03 novembre}  & Exercices: XML et JSON avec Python \\ \hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\section{Introduction}
+\input{00-Introduction}
+
+\section{Structure d'un document XML}
+\input{01 - Introduction au XML/01-Structurer_doc_xml}
+
+\section{Contraindre le XML}
+\input{01 - Introduction au XML/02-Contraindre_xml}
+
+\section{XML-TEI}
+\input{01 - Introduction au XML/03-XML-TEI}
+
+\end{document}

@@ -1,0 +1,76 @@
+\begin{frame}{Un peu d'histoire}
+    \centering
+    \small{
+    \og La TEI a été d'abord développée, il y a plus de trente ans, comme un projet de recherche dans le champ alors émergent du \og Humanities computing \fg. L'idée originelle était de proposer un ensemble de recommandations sur la façon dont les chercheurs devraient créer des ressources textuelles \og lisibles par ordinateur\fg, qui soient adaptées aux besoins de la recherche - dans la mesure où un consensus existait sur le sujet -, mais qui soient également extensibles, puisque ces besoins changent et évoluent.\fg
+    }\\
+    \textbf{Burnard, Lou. \og Introduction \fg. \textit{Qu'est-ce que la Text Encoding Initiative ?}, OpenEdition Press, 2015, \url{https://doi.org/10.4000/books.oep.129}}
+\end{frame}
+
+\begin{frame}{Un peu d'histoire}
+    \textbf{\textit{Text Encoding Initiative}:} créée en 1987 lors d'une conférence à Poughkeepsie sur les sciences humaines.\\
+    Projet est de créer des recommandations sur l'encodage de textes informatiques.
+
+    \begin{block}{Trois principes selon Lou Burnard:}
+    \begin{itemize}
+        \item le XML TEI s'intéresse au sens du texte plutôt qu'à son apparence;
+        \item le XML TEI est indépendant de tout environnement logiciel particulier;
+        \item le XML TEI a été conçu par la communauté scientifique, qui est aussi en charge de son développement continu.
+    \end{itemize}
+        
+    \end{block}
+\end{frame}
+
+\begin{frame}{Tei Guidelines}
+    TEI Consortium crée en 2000. Liste de recommandation: \url{https://tei-c.org/guidelines/}
+\end{frame}
+
+\begin{frame}[fragile]{TEI Guidelines}
+    \begin{lstlisting}[numbers=none]
+    <div>
+        <p> 
+            <persName> Toto </persName>
+        </p>
+    </div>
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Déclaration TEI}
+    Pour utiliser les balises TEI, il faut déclarer l'espace de noms:\\
+    \begin{lstlisting}
+        <TEI xmlns="http://www.tei-c.org/ns/1.0">
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Squelette d'un document TEI}
+    \begin{lstlisting}
+        <TEI xmlns="http://www.tei-c.org/ns/1.0">
+            <teiHeader>
+            </teiHeader>
+            <text>
+                <body>
+                    <p></p>
+                </body>
+            </text>
+        </TEI>
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}{Installations}
+    Installer VS Code: \url{https://code.visualstudio.com/download?_exp_download=fb315fc982}\\
+    Extension: Scholarly XML
+\end{frame}
+
+\begin{frame}[fragile]{Exercice: encoder en TEI}
+Encoder à nouveau l'extrait du \textit{Bourgeois Gentilhomme} mais en XML-TEI en utilisant la documentation sur \href{https://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html}{les textes théâtraux}\\
+\begin{lstlisting}
+    <castList> 
+    <castItem> 
+    <speaker> 
+    <sp>
+\end{lstlisting}    
+\end{frame}
+
+
+\begin{frame}{Exercice: encoder en TEI}
+    Encoder le poème \textit{Heureux qui, comme Ulysse...} de Joachim Du Bellay en s'appuyant sur la documentation sur \href{https://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html}{les poèmes}.
+\end{frame}

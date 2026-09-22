@@ -1,0 +1,66 @@
+\begin{frame}{Pourquoi contraindre le XML?}
+    \begin{itemize}
+        \item Uniformiser l'encodage~;
+        \item Collaborer à plusieurs sur un même projet~;
+        \item Automatisation.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Spécifications du XML: \textit{Document Type Definition} (DTD)}
+    La \textbf{DTD} est une \textbf{liste de déclarations} qui permet de définir:
+    \begin{itemize}
+        \item la structure d'un document~;
+        \item les éléments et attributs autorisés.
+    \end{itemize}
+    \textcolor{red}{\textrightarrow{} Un document XML peut être bien formé mais invalide car ne respecte par les règles de la DTD !}
+\end{frame}
+
+\begin{frame}[fragile]{Spécifications du XML: \textit{Document Type Definition} (DTD)}
+    \begin{block}{Exemple (source W3C):}
+\begin{lstlisting}
+<!DOCTYPE NEWSPAPER [
+
+<!ELEMENT NEWSPAPER (ARTICLE+)>
+<!ELEMENT ARTICLE (HEADLINE,BYLINE,LEAD,BODY,NOTES)>
+<!ELEMENT HEADLINE (#PCDATA)>
+<!ELEMENT BYLINE (#PCDATA)>
+<!ELEMENT LEAD (#PCDATA)>
+<!ELEMENT BODY (#PCDATA)>
+<!ELEMENT NOTES (#PCDATA)>
+
+<!ATTLIST ARTICLE AUTHOR CDATA #REQUIRED>
+<!ATTLIST ARTICLE EDITOR CDATA #IMPLIED>
+<!ATTLIST ARTICLE DATE CDATA #IMPLIED>
+<!ATTLIST ARTICLE EDITION CDATA #IMPLIED>
+\end{lstlisting}
+
+    \end{block}
+        
+\end{frame}
+
+\begin{frame}{Spécifications du XML: \textit{Document Type Definition} (DTD)}
+    Limites du DTD:
+    \begin{itemize}
+        \item N'est pas rédigé en XML~;
+        \item Assez limité en terme d'attributs~;
+        \item Difficile à lire~;
+        \item Limité en espace de noms.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Les schémas XML: définition}
+\begin{block}{}
+\textbf{Définition:}\\
+    \small{
+    \og Un schéma spécifie \textbf{un ensemble de noms d'éléments}, \textbf{les noms et le type de données de tous les attributs} qui leur sont associés, et \textbf{les règles relatives aux contextes} dans lesquels ils peuvent apparaître.\fg{}}\\
+    Burnard, Lou. \og La TEI et le XML \fg. \textit{Qu'est-ce que la Text Encoding Initiative }?, OpenEdition Press, 2015, \url{https://doi.org/10.4000/books.oep.1298}.
+\end{block}
+    
+\end{frame}
+
+\begin{frame}{Les schémas XML: exemple du XML-EAD}
+    \textbf{\textit{Encoded Archival Description} =} crée dans les années 1990, c'est une DTD utilisée pour la description de fonds d'archive. Depuis 2007, est un format XML.\\
+     \textbf{Exemple:} \href{https://ccfr.bnf.fr/portailccfr/servlet/ViewManager?menu=public_menu_view&record=eadbam:EADC:d0e1129770_FRBNFEAD0000129462&setCache=all_simple.PUBLIC_CATALOGUE_SIMPLE_MULTI&fromList=true&source=all_simple&action=public_search_federated&query=PUBLIC_CATALOGUE_SIMPLE}{Dossiers individuels de prisonniers de la Bastille}
+\end{frame}
+
+
