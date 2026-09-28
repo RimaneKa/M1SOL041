@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<text>
+    <body>
+        <head> 
+            Heureux qui comme Ulysse 
+        </head>
+        <!-- Tout englober dans un <lg type="verset"> c'est bon, numéroter les vers et ajouter le type de strophe-->
+        <lg type="quatrain">
+            <l n="1">Heureux qui, comme <persName>Ulysse</persName>, a fait un beau voyage,</l>
+            <l n="2">Ou comme cestuy-là qui conquit la toison, </l>
+            <l n="3">Et puis est retourné, plein d'usage et raison,</l>
+            <l n="4">Vivre entre ses parents le reste de son âge !</l>
+        </lg>
+        <lg type="quatrain">
+            <l n="5">Quand reverrai-je, hélas, de mon petit village</l>
+            <l n="6">Fumer la cheminée, et en quelle saison</l>
+            <l n="7">Reverrai-je le clos de ma pauvre maison</l>
+            <l n="8">Qui m'est une province, et beaucoup davantage ?</l>
+        </lg>
+        <lg type="tercet">
+            <l n="9">Plus me plaît le séjour qu'ont bâti mes aïeux,</l>
+            <l n="10">Que des palais Romains le front audacieux,</l>
+            <l n="11">Plus que le marbre dur me plaît l'ardoise fine:</l>
+        </lg>
+        <lg type="tercet">
+            <l n="12">Plus mon <placeName>Loire</placeName> gaulois, que le <placeName>Tibre</placeName> latin,</l>
+            <l n="13">Plus mon petit <placeName>Liré</placeName>, que le <placeName>mont Palatin</placeName>,</l>
+            <l n="14">Et plus que l'air marin la doulceur angevine.</l>
+        </lg>
+    </body>
+</text>
+</TEI>

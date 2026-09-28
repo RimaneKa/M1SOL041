@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"> <!-- balise à fermer-->
+<div>
+        <castList>
+            <castItem xml:id="MJ">
+                <role>MONSIEUR JOURDAIN</role>    
+            </castItem>
+            <castItem xml:id="MP">
+                <role>MAÎTRE DE PHILOSOPHIE</role>  
+              </castItem>
+        </castList>
+        <!-- On peut faire deux chose: soit utiliser xml:id pour identifier les personnages, ou numéroter les <speaker> -->
+            <sp who="#MP">
+               <speaker n="1">MAÎTRE DE PHILOSOPHIE</speaker>   
+               <p>Sans doute. Sont-ce des vers que vous lui voulez écrire ?</p> 
+            </sp>
+            <sp who="#MJ">
+                <speaker n="2">MONSIEUR JOURDAIN</speaker>  
+                <p>Non, non, point de vers.</p>
+            </sp>
+            <sp who="#MP">
+                <speaker>MAÎTRE DE PHILOSOPHIE</speaker>   
+                <p>Vous ne voulez que de la prose ?</p>
+            </sp>
+            <sp who="#MJ">
+                <speaker>MONSIEUR JOURDAIN</speaker>  
+                <p>Non, je ne veux ni prose, ni vers.</p>
+
+            </sp>
+            <sp who="#MP">
+                <speaker>MAÎTRE DE PHILOSOPHIE</speaker>   
+                <p>Il faut bien que ce soit l’un, ou l’autre.</p>
+
+            </sp>
+            <sp who="#MJ">
+                <speaker>MONSIEUR JOURDAIN</speaker>   
+                <p>Pourquoi ?</p>
+
+            </sp>
+            <sp who="#MP">
+                <speaker>MAÎTRE DE PHILOSOPHIE</speaker>   
+                <p>Par la raison, Monsieur, qu’il n’y a pour s’exprimer, 
+                que la prose, ou les vers.</p>
+
+            </sp>
+            <sp who="#MJ">
+                <speaker>MONSIEUR JOURDAIN</speaker>   
+                <p>Il n’y a que la prose, ou les vers ?</p>
+
+            </sp>
+            <sp who="#MP">
+                <speaker>MAÎTRE DE PHILOSOPHIE</speaker>   
+                <p>Non, Monsieur : tout ce qui n’est point prose, est vers ;
+                et tout ce qui n’est point vers, est prose.</p>
+
+            </sp>
+            <sp who="#MJ">
+                <speaker>MONSIEUR JOURDAIN</speaker>   
+                <p>Et comme l’on parle, qu’est-ce que c’est donc que cela ?</p>
+
+            </sp>
+            <sp who="#MP">
+                <speaker>MAÎTRE DE PHILOSOPHIE</speaker>   
+                <p>De la prose.</p>
+
+            </sp>
+            <sp who="#MJ">
+                <speaker>MONSIEUR JOURDAIN</speaker>   
+                <p>Quoi, quand je dis : <q>« Nicole, apportez-moi mes pantoufles, 
+                et me donnez mon bonnet de nuit »</q>, c’est de la prose ?</p>
+
+            </sp>
+            <sp who="#MP">
+                <speaker>MAÎTRE DE PHILOSOPHIE</speaker>   
+                <p>Oui, Monsieur</p>
+
+            </sp>
+</div>
+</TEI>
