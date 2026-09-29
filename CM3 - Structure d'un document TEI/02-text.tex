@@ -1,0 +1,27 @@
+\begin{frame}{Structure de \texttt{<text>}}
+    Dans l'élément \texttt{<text>}, on a~:
+    \begin{itemize}
+        \item \texttt{<front>}~: pour les préfaces;
+        \item \texttt{<body>}~: pour le corps du texte \textcolor{red}{(obligatoire!)};
+        \item \texttt{<back>}~: pour les appendices, annexes etc...
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Exemple}
+    \begin{lstlisting}[numbers=none]
+        <text>
+            <body>
+                <div type="chapter" n="1">
+                    <head>  Titre du chapitre  </head>
+                    <div type="subparts" n="1">
+                        <p> du texte </p>
+                    </div>
+                </div>
+            </body>
+        </text>
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}{Exercices}
+    \url{https://pad.libreon.fr/1plJ_-A-T_OY1E1TsSiRdQ}
+\end{frame}

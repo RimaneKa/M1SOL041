@@ -1,0 +1,76 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<TEI xml:id="jd.entry.12506.02">
+<teiHeader>
+<fileDesc>
+<titleStmt>
+<title>Title</title>
+<respStmt>
+<resp>Rétroconversion Spip vers XML-TEI</resp>
+<persName>Josselin Morvan</persName>
+</respStmt>
+<respStmt>
+<resp>Validation des fichiers XML-TEI</resp>
+<persName>Élisa Barthélemy</persName>
+<persName>Hélène Hôte</persName>
+</respStmt>
+<respStmt>
+<resp>Transcription</resp>
+<persName>Florence Naugrette</persName>
+</respStmt>
+</titleStmt>
+<publicationStmt>
+<p/>
+</publicationStmt>
+<sourceDesc>
+<msDesc>
+<msIdentifier>
+<repository>Collection particulière</repository>
+</msIdentifier>
+</msDesc>
+</sourceDesc>
+</fileDesc>
+<profileDesc>
+<correspDesc>
+<correspAction type="written">
+<persName>Juliette Drouet</persName>
+<date when="1848-02-24">24 février 1848</date>
+<placeName>Paris</placeName>
+</correspAction>
+<correspAction type="received">
+<persName>Victor Hugo</persName>
+</correspAction>
+</correspDesc>
+</profileDesc>
+</teiHeader>
+<text>
+<body>
+<div type="letter">
+<opener>
+<dateline rend="right">
+24 février
+<supplied>1848</supplied>
+, jeudi matin 8 h. ½
+</dateline>
+</opener>
+<p>
+Hélas ! mon pauvre adoré, qu’est-ce que tout ceci va devenir ? et quand te verrai-je ? Tu sais qu’on s’est battu une partie de la nuit ? À une heure du matin la fusillade était on ne peut pas plus vive. Il me semble même avoir entendu les cloches et
+<persName ref="#jd.notice.642">Suzanne</persName>
+aussi. Je suis épuisée d’insomnie et d’inquiétude. Quoique tu sois très populaire et justement admiré et adoré de tous, je crains d’affreux hasards et je me tourmente sans pouvoir m’en empêcher. Les rues sont pleines de barricades, la fusillade et le canon s’entrecroisent, les hommes sont entraînés de vive force pour faire les barricades et pour les défendre. Ainsi le menuisier, le serrurier et le boucher de la maison ont été emmenés malgré eux et malgré leurs familles. M. 
+<unclear>Bertoni</unclear>
+dit qu’on ne veut entendre à aucun accommodement, et qu’on proclame la république à tous les carrefours notamment dans le quartier Montorgueil et des Halles
+<note type="footnote">Juliette habite alors non loin de chez Victor Hugo dans le quartier de la Place Royale (actuelle Place des Vosges), près de la Bastille et du faubourg Saint-Antoine, qui ne va pas tarder, lui aussi, à s’embraser.</note>
+. Je ne sais pas ce qu’il y a de vrai dans tous ces
+<hi rend="underline">on-dit</hi>
+mais ce qui n’est que trop certain c’est le tocsin sonnant à toutes les paroisses et les coups de fusils et de canons sans interruption. Tout cela me navre l’âme et je ne sais plus ce que je fais.
+<lb/>
+La pensée que tu es mêlé à cette déplorable affaire et qu’il faut que tu paies de ta présence dans cet horrible tumulte me donne le vertige et il me semble que chaque détonation m’enlève une partie de ma raison
+<note type="footnote">Juliette Drouet, d’abord très hostile à la Révolution, et effrayée par le « spectre rouge », se laissera finalement gagner aux idées républicaines.</note>
+Mon Victor adoré, mon sublime bien-aimé, sois prudent. Pense que la plus affreuse mort pour moi serait celle qui me viendrait à travers toi. Mon Victor, sois prudent, pense à moi, et ne fais aucune témérité. Je baise tes pieds.
+</p>
+<closer>
+<signed rend="right">Juliette</signed>
+</closer>
+</div>
+</body>
+</text>
+</TEI>

@@ -1,0 +1,87 @@
+\documentclass[10pt]{beamer}
+\usetheme{metropolis}
+
+\usepackage[utf8]{inputenc}
+\usepackage[russian,french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{
+    left=2.5mm,
+    right=2.5mm,
+    top=0mm,
+    bottom=0mm
+}
+\usepackage{amssymb} % pour \blackdiamond
+\usepackage{tikz}
+\usepackage{graphicx,animate}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{listings}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{minted}
+\usepackage{hyperref}
+
+\lstset{%
+basicstyle=\small\ttfamily,%
+columns=flexible,%
+breaklines=true,%
+language=xml,%
+numberstyle=\footnotesize,%
+numbers=left,%
+tabsize=2,%
+title=\lstname,%
+escapeinside={\%*}{*)},%
+breaklines=true,%
+breakatwhitespace=true,%
+% framextopmargin=1em,%
+% framexbottommargin=1em,%
+moredelim=[s][\bfseries\color{RoyalBlue}]{<}{\ },%
+moredelim=[s][\bfseries\color{RoyalBlue}]{</}{>},%
+moredelim=[l][\bfseries\color{RoyalBlue}]{/>},%
+moredelim=[l][\bfseries\color{RoyalBlue}]{>},%
+morecomment=[s]{<?}{?>},%
+morecomment=[s]{<!--}{-->},%
+commentstyle=\color{ForestGreen},%
+stringstyle=\color{RedOrange},%
+% identifierstyle=\color{red},%
+inputencoding=utf8%
+}
+
+\newcommand{\replacementchar}{%
+  \tikz[baseline=-0.6ex]{
+    %\node[inner sep=0pt] (d) {\Large$\blackdiamond$};
+    \node[inner sep=0pt] (d) {\Large$\blacksquare$};
+    \node[white, font=\scriptsize\bfseries] at (d.center) {?};
+  }%
+}
+\usepackage{tabularx}
+%\usepackage[style=alphabetic,citestyle=authoryear]{biblatex}
+%\addbibresource{bibliographie.bib}
+
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+\title{M1SOL041: Représentation et traitement des documents électroniques\\
+Cours 3: Structurer un document XML-TEI}
+
+\date{}
+\author{Marine Tiger\\  \quad {marine.tiger@sorbonne-universite.fr\\}}
+
+\institute{Littératures françaises et comparée ED19, CELLF, Sorbonne Université}
+
+\begin{document}
+\maketitle
+\setbeamertemplate{section in toc}[sections numbered]
+
+
+\section{Introduction}
+\input{02 - Structurer un document XML-TEI/00-Introduction}
+
+\section{Le \texttt{<teiHeader>}}
+\input{01-teiheader}
+
+\section{Le \texttt{<text>}}
+\input{02 - Structurer un document XML-TEI/02-text}
+
+\section{Personnaliser la TEI: ODD}
+\input{02 - Structurer un document XML-TEI/03-Personnaliser_TEI}
+
+\end{document}

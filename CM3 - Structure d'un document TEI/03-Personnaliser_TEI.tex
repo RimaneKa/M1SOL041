@@ -1,0 +1,153 @@
+\begin{frame}{Rappel: notion de schéma}
+\begin{block}{Fondamentale en XML~:}
+    \begin{itemize}
+        \item Mettre en place un vocabulaire contrôlé;
+        \item Contraindre la structure d'un document (et l'adapter à nos besoins).
+    \end{itemize}
+    Vérifiable avec un validateur XML. Ex: \url{https://www.xmlvalidation.com/}.
+\end{block}
+\begin{block}{}
+    Pour les contraintes en TEI, par exemple:
+    \begin{itemize}
+        \item \og utilisez \texttt{<placeName>} pour les noms de lieux, \texttt{<persName>} pour les noms de personnes et \texttt{<name>} pour tout autre nom\fg
+    \end{itemize}
+    \textrightarrow{} Ne peut pas être vérifié manuellement (on regarde les guidelines).
+\end{block}
+\end{frame}
+
+\begin{frame}{Pourquoi contraindre la TEI?}
+    Très pratique dans les projets d'édition numérique permet par exemple de~:
+    \begin{itemize}
+        \item Contraindre les valeurs de l'attribut \texttt{@type};
+        \item Documenter les choix d'édition.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Les schémas XML}
+    \begin{itemize}
+        \item DTD;
+        \item XML Schema: crée par le W3C, écrit en XML, permet de définir la structure et le type de contenu d'un document XML;
+        \item Relax NG: écrit en XML, supporte les espaces de noms XML, peut créer des contraintes précises.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Les schémas XML: DTD}
+    \begin{lstlisting}[numbers=none]
+    <!ELEMENT texte (chapitre+)>
+    <!ELEMENT chapitre (titre?, paragraphe+)>
+    <!ELEMENT titre (#PCDATA)>
+    <!ATTTLIST chapitre CDATA #REQUIRED>
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Les schémas XML: XML Schema}
+    \begin{lstlisting}[numbers=none]
+    <xs:element name="texte" maxOccurs="unbounded">
+         <xs:complexType>
+             <xs:sequence>
+             <xs:element name="titre"
+             type="xs:string"/>
+             <xs:element name="chap" type="xs:decimal"
+             minOccurs="0"/>
+             </xs:sequence>
+         </xs:complexType>
+    </xs:element>
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Les schémas XML: Relax NG}
+    \begin{lstlisting}[numbers=none]
+    <element name="edition">
+         <zeroOrMore>
+             <element name="texte">
+                 <element name="titre">
+                    <text/>
+                 </element>
+                 <element name="paragraphe">
+                    <text/>
+                 </element>
+             </element>
+         </zeroOrMore>
+    </element>
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}{Combinaison de la DTD et du RNG: l'ODD}
+\begin{block}{\textit{One Document Does It All}}
+\vspace{0.5em}
+    Comporte à la fois \textbf{un schéma de validation} et \textbf{une documentation} de ce schéma.\\
+    \textrightarrow{} un seul document XML avec les informations pour le traitement informatique et pour l'humain.
+\end{block}
+\begin{block}{Deux types de personnalisation basiques}
+\begin{itemize}
+    \item \textbf{\textit{tei\_all} =} autorise tous les éléments définis par la TEI.
+    \item \textbf{\textit{tei\_lite} =} propose environ une cinquantaine d'élément TEI (au lieu de 450).
+\end{itemize}
+
+\end{block}
+    
+\end{frame}
+
+\begin{frame}[fragile]{Structure ODD: déclarations}
+    \begin{lstlisting}
+        <?xml version="1.0" encoding="UTF-8"?>
+        <?xml-model href="url vers odd rng" 
+        type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+        <?xml-model 
+        href="url vers odd rng"
+        schematypens="http://purl.oclc.org/dsdl/schematron"?>
+        
+    \end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]{Structure ODD: en-tête}
+    \begin{lstlisting}
+        <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+          <teiHeader>
+            <fileDesc>
+              <titleStmt></titleStmt>
+              <publicationStmt></publicationStmt>
+              <sourceDesc></sourceDesc>
+            </fileDesc>
+            <revisionDesc></revisionDesc>
+          </teiHeader>
+          <text>
+            <body></body>
+          </text>
+        </TEI>
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Structure ODD: corps du texte}
+    \begin{itemize}
+        \item \texttt{<schemaSpec>:} défini les spécifications du schéma;
+        \item \texttt{<moduleRef>:} défini \href{https://www.tei-c.org/Vault/P5/1.5.0/doc/tei-p5-doc/fr/html/REF-CLASSES-MODEL.html}{un module} qui doit être présent dans l'encodage;
+        \item \texttt{<elementSpec>:} permet de modifier, ajouter, contraindre un élément;
+        \item \texttt{<attList>:} permet de contraindre le contenu d'un attribut.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Structure ODD: corps du texte}
+    \begin{figure}
+        \centering
+        \includegraphics[width=\linewidth]{02 - Structurer un document XML-TEI/exemple_moduleref.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Structure ODD: corps du texte}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.9\linewidth]{02 - Structurer un document XML-TEI/exemple_attlist.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Créer son ODD}
+   \begin{itemize}
+       \item Outil Roma: \url{https://roma.tei-c.org/members}
+   \end{itemize}
+\end{frame}
+
+\begin{frame}{Exercice: générer une ODD pour le \textit{Bourgeois Gentilhomme}}
+Générer une ODD en utilisant l'outil Roma.
+    
+\end{frame}

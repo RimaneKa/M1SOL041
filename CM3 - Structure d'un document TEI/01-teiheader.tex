@@ -1,0 +1,72 @@
+\begin{frame}{Structure de l'en-tête TEI}
+\begin{block}{}
+    \textbf{teiHeader}: en-tête contenant les métadonnées décrivant le document.
+\end{block}
+    \begin{block}{}
+        \textbf{4 composants principaux:}
+    \begin{itemize}
+            \item \texttt{<fileDesc>}~: description d'un document \textcolor{red}{(obligatoire!)};
+            \item \texttt{<encodingDesc>}~: description de l'encodage. Relation entre le document électronique et la ou les source(s) dont il est issu;
+            \item \texttt{<profileDesc>}~: description non-bibliographique (langue du texte, contexte de production etc...);
+            \item \texttt{<revisionDesc>}~: historique des modifications du fichier.
+            
+    \end{itemize}
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}{Description d'un fichier avec \texttt{<fileDesc>}}
+\textbf{Trois parties obligatoires}~:
+\begin{itemize}
+    \item \texttt{<titleStmt>}~: le titre de l'oeuvre;
+    \item \texttt{<publicationStmt>}~: information sur la publication de l'oeuvre (date, lieu...);
+    \item \texttt{<sourceDesc>}~: information sur la source dont est tirée l'oeuvre (description du manuscrit par exemple).
+\end{itemize}
+    
+\end{frame}
+
+\begin{frame}[fragile]{Description d'un fichier avec \texttt{<fileDesc>}}
+ \begin{lstlisting}[numbers=none]
+    <TEI xmlns="http://www.tei-c.org/ns/1.0">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt> Titre </titleStmt>
+                <publicationStmt> Date et lieu de la publication</publicationStmt>
+                <sourceDesc> Description de la source </sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        <text>
+        </text>
+    </TEI>
+    \end{lstlisting}
+    
+\end{frame}
+
+\begin{frame}{Description des choix d'encodage avec \texttt{<encodingDesc>}}
+    \begin{itemize}
+        \item \texttt{<projectDesc>}: description du projet;
+        \item \texttt{<editorialDecl>}: précisions sur les pratiques éditoriales employées;
+        \item \texttt{<variantEncoding>}: utilisé pour l'encodage d'apparat critique.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Description non-bibliographique avec \texttt{<profileDesc>}}
+\begin{itemize}
+    \item \texttt{<creation>}~: origine du texte;
+    \item \texttt{<langUsage>}~: langue d'écriture du texte;
+    \item \texttt{<textDesc>}~: description de texte;
+    \item \texttt{<particDesc>}~: description des participants réels ou fictifs;
+    \item \texttt{<settingDesc>}~: description du contexte.
+\end{itemize}
+    
+\end{frame}
+
+\begin{frame}{Exercice: en-tête TEI du \textit{Bourgeois Gentilhomme}}
+Ecrire le \texttt{<teiHeader>} avec les éléments suivants et en s'appuyant sur les guidelines~:
+\begin{itemize}
+    \item \texttt{<fileDesc>} (et ses trois parties obligatoires)
+            \item \texttt{<encodingDesc>}
+            \item \texttt{<profileDesc>}
+            \item \texttt{<revisionDesc>}
+\end{itemize}
+\end{frame}

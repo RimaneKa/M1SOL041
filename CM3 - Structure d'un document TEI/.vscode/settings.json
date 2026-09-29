@@ -1,0 +1,8 @@
+{
+    "xml.fileAssociations": [
+        {
+            "pattern": "**/*.odd",
+            "systemId": "/home/marine/.vscode/extensions/e-editiones.oddity-0.6.0/schemas/teipublisher_odds.xsd"
+        }
+    ]
+}
