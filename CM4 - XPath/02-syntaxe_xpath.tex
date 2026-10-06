@@ -1,0 +1,103 @@
+\begin{frame}{Construire un chemin de localisation}
+    \begin{itemize}
+        \item Un chemin XPath est une suite d'étapes
+        \item Les étapes sont séparées par des "/"
+    \end{itemize}
+    \textbf{Une étape est constituée de trois composants:}
+    \begin{itemize}
+        \item \textbf{Axe =} sens de parcours des noeuds (\texttt{parent::}, \texttt{descendant::})
+        \item \textbf{Test de noeud =} nom d'un noeud dans le sens de l'axe
+        \item \textbf{Prédicat(s) =} précise la caractéristique du noeud (sorte de filtre)
+    \end{itemize}
+    \texttt{//lg[position()=2]/\textcolor{red}{descendant::}\textcolor{green}{l} \textcolor{blue}{[position()=2]}/text()}
+\end{frame}
+
+\begin{frame}{Syntaxe des noeuds}
+    \begin{itemize}
+        \item \textbf{Élément:} Désigne l'élément.
+        \item \textbf{@NomAttribut:} Désigne l'attribut.
+        \item \textbf{text():} Désigne le contenu textuel d'un élément sans la balise.
+        \item \textbf{comment():} Désigne le contenu d'un commentaire.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Premier composant d'une étape: axe}
+        \include{03 - XPath/syntaxe_tableau}    
+\end{frame}
+
+\begin{frame}{Deuxième composant: le "test de noeud"}
+    \textrightarrow{} Soit le nom du noeud soit le type de noeud
+    \begin{itemize}
+        \item \textbf{nom du noeud:} Vers le noeud dont le nom est spécifié
+        \item \textbf{*:} Vers tous les noeuds
+        \item \textbf{node():} Vers tous les types de noeuds (éléments, commentaires, attributs, etc...)
+        \item \textbf{text():} Vers les noeuds de type texte
+        \item \textbf{comment():} Vers les noeuds de type commentaire
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemple axe + filtre}
+    \begin{itemize}
+        \item Je veux récupérer le \texttt{<head>} en chemin absolu:
+        \texttt{/\textcolor{red}{child::}\textcolor{blue}{TEI}/\textcolor{red}{child::}\textcolor{blue}{text}/\textcolor{red}{child::}\textcolor{blue}{body}/\textcolor{red}{child::}\textcolor{blue}{head}}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemple axe + filtre}
+    \begin{figure}
+        \centering
+        \includegraphics[width=\linewidth]{03 - XPath/arbre_xml_head_path.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Exemple axe + filtre}
+    \begin{itemize}
+        \item On peut aussi récupérer le \texttt{<head>} en chemin relatif:\\
+        \texttt{//body/child::head}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemple axe + filtre}
+Récupérer tous les commentaires du document TEI:
+    \begin{itemize}
+        \item Se fait en une seule étape en sélectionnant tous les descendants du noeud racine qui sont des commentaires:\\
+        \texttt{/descendant::comment()}        
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Troisième composant: le prédicat}
+    \begin{itemize}
+        \item On peut filtrer grâce aux prédicats
+        \item \texttt{Axe::Noeud[Prédicat1][Prédicat2]...}
+    \end{itemize}
+    \texttt{//lg[position()=2]/descendant::l \textcolor{blue}{[position()=2]/text()}}
+\end{frame}
+
+\begin{frame}{Troisième composant: le prédicat}
+    \begin{itemize}
+        \item \textbf{attribute:} Affiner la recherche en fonction d'un attribut
+        \item \textbf{count():} Compter le nombre de noeuds
+        \item \textbf{last():} Sélectionner le dernier noeud d'une liste
+        \item \textbf{position():} Affiner la recherche selon la position d'un noeud
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Troisième composant: le prédicat}
+    \begin{block}{Exemples:}
+        \begin{itemize}
+            \item \textcolor{blue}{\texttt{//lg[@type]}}
+            \begin{itemize}
+                \item Les noeuds lg qui ont un attribut type
+            \end{itemize}
+            \item \textcolor{blue}{\texttt{//lg[@type="quatrain"]}}
+            \begin{itemize}
+                \item Les noeuds lg qui un attribut type valant quatrain
+            \end{itemize}
+            \item \textcolor{blue}{\texttt{//lg/descendant::text()[position()=1]}}
+            \begin{itemize}
+                \item Le premier noeud de type texte descendant d'un \texttt{<lg>}
+                \item Peut s'abréger: \textcolor{blue}{ \texttt{//lg/descendant::text()[1]}}
+            \end{itemize}
+        \end{itemize}
+    \end{block}
+\end{frame}

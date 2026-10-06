@@ -1,0 +1,68 @@
+\begin{frame}{Naviguer dans un fichier XML}
+    \begin{itemize}
+        \item La hiérarchie d'un document XML se présente sous forme d'arbre constitué de \textcolor{red}{noeuds}
+        \item Le langage XPath permet de sélectionner un noeud ou un ensemble de noeuds.
+    \end{itemize}
+    \textbf{Objectif:} Atteindre des fragments du document ayant certaines propriétés spécifiées dans une expression XPath
+\end{frame}
+
+\begin{frame}{Naviguer dans un fichier XML}
+    \begin{figure}
+        \centering
+        \includegraphics[width=\linewidth]{03 - XPath/arbre_xml.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Relations "généalogiques" entre les noeuds}
+    \begin{itemize}
+        \item \textbf{Parent =} Noeud \textcolor{red}{directement} au-dessus.
+        \item \textbf{Enfant =} Noeud \textcolor{red}{directement} en dessous dans la hiérarchie.
+        \item \textbf{Descendant =} Noeuds situés en dessous.
+        \item \textbf{Ancêtre =} Noeuds situés au dessus.
+        \item \textbf{Frère = } Noeuds situés au même niveau.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Notion central: chemin}
+    \begin{itemize}
+        \item Une expression (ou requête) décrit le chemin emprunté dans l'arbre pour atteindre les données qui nous intéressent.
+        \item Un chemin peut être:
+        \begin{itemize}
+            \item \textcolor{red}{Absolu =} à partir de la racine.
+            \item \textcolor{red}{Relatif =} à partir de l'endroit où l'on est dans le chemin (= le noeud courant).
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Notion central: chemin}
+    \begin{block}{Chemin absolu}
+        \begin{itemize}
+            \item Commence par "/" suivie du noeud racine XML
+            \item Connaissance exacte de la structure de l'arbre manipulé
+            \item Chemin complet conduisant aux données à atteindre
+        \end{itemize}
+    \end{block}
+    \begin{block}{Exemple: récupérer le titre du poème}
+        \begin{itemize}
+            \item Étape 1: noeud \textbf{TEI}
+            \item Étape 2: noeud enfant \textbf{teiHeader}
+            \item Étape 3: noeud enfant \textbf{fileDesc}
+            \item Étape 4: noeud enfant \textbf{titleStmt}
+            \item Étape 5: noeud enfant \textbf{title}
+        \end{itemize}
+        \textcolor{blue}{\texttt{/Tei/teiHeader/fileDesc/titleStmt/title}}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Notion central: chemin}
+    \begin{block}{Chemin relatif}
+        \begin{itemize}
+            \item Le noeud de départ peut être n'importe quel noeud de l'arbre
+            \item Commence par "//"
+        \end{itemize}
+    \end{block}
+    \begin{block}{Exemple: récupérer le titre du poème}
+        \vspace{0.5em}
+        \textcolor{blue}{\texttt{//fileDesc/title}}
+    \end{block}
+\end{frame}

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Liste de livres qui ont remporté un prix</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Exercice TD4 M1</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Conversion du XML de l'exercice sur XPath de l'année précédente</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <listBibl>
+            <bibl>
+               <author>Kingsley Amis</author>
+               <title>The Old Devils</title>
+               <date>1986</date>
+            </bibl>
+            <bibl>
+               <author>Margaret Atwood</author>
+               <title>The Blind Assassin</title>
+               <date>2000</date>
+            </bibl>
+            <bibl>
+               <author>Pat Barker</author>
+               <title>The Ghost Road</title>
+               <date>1995</date>
+            </bibl>
+            <bibl>
+               <author>John Berger</author>
+               <title>G</title>
+               <date>1972</date>
+            </bibl>
+            <bibl>
+               <author>Anita Brookner</author>
+               <title>Hotel du Lac</title>
+               <date>1984</date>
+            </bibl>
+            <bibl>
+               <author>A S Byatt</author>
+               <title>Possession</title>
+               <date>1990</date>
+            </bibl>
+            <bibl>
+               <author>Peter Carey</author>
+               <title>Oscar and Lucinda</title>
+               <date>1988</date>
+            </bibl>
+            <bibl>
+               <author>J M Coetzee</author>
+               <title>Disgrace</title>
+               <date>1999</date>
+            </bibl>
+            <bibl>
+               <author>J M Coetzee</author>
+               <title>Life and Times of Michael K</title>
+               <date>1983</date>
+            </bibl>
+            <bibl>
+               <author>Roddy Doyle</author>
+               <title>Paddy Clarke Ha Ha Ha</title>
+               <date>1993</date>
+            </bibl>
+            <bibl>
+               <author>J G Farrell</author>
+               <title>The Siege of Krishnapur</title>
+               <date>1973</date>
+            </bibl>
+            <bibl>
+               <author>Penelope Fitzgerald</author>
+               <title>Offshore</title>
+               <date>1979</date>
+            </bibl>
+            <bibl>
+               <author>William Golding</author>
+               <title>Rites of Passage</title>
+               <date>1980</date>
+            </bibl>
+            <bibl>
+               <author>Nadine Gordimer</author>
+               <title>The Conservationist</title>
+               <date>1974</date>
+            </bibl>
+            <bibl>
+               <author>Keri Hulme</author>
+               <title>The Bone People</title>
+               <date>1985</date>
+            </bibl>
+            <bibl>
+               <author>Kazuo Ishiguro</author>
+               <title>The Remains of the Day</title>
+               <date>1989</date>
+            </bibl>
+            <bibl>
+               <author>Ruth Prawer Jhabvala</author>
+               <title>Heat et Dust</title>
+               <date>1975</date>
+            </bibl>
+            <bibl>
+               <author>James Kelman</author>
+               <title>How Late It Was, How Late</title>
+               <date>1994</date>
+            </bibl>
+            <bibl>
+               <author>Thomas Keneally</author>
+               <title>Schindler's Ark</title>
+               <date>1982</date>
+            </bibl>
+            <bibl>
+               <author>Penelope Lively</author>
+               <title>Moon Tiger</title>
+               <date>1987</date>
+            </bibl>
+            <bibl>
+               <author>Ian McEwan</author>
+               <title>Amsterdam</title>
+               <date>1998</date>
+            </bibl>
+            <bibl>
+               <author>Stanley Middleton</author>
+               <title>Holiday</title>
+               <date>1974</date>
+            </bibl>
+            <bibl>
+               <author>Iris Murdoch</author>
+               <title>The Sea</title>
+               <date>1978</date>
+            </bibl>
+            <bibl>
+               <author>V S Naipaul</author>
+               <title>In a Free State</title>
+               <date>1971</date>
+            </bibl>
+            <bibl>
+               <author>P H Newby</author>
+               <title>Something To Answer For</title>
+               <date>1969</date>
+            </bibl>
+            <bibl>
+               <author>Ben Okri</author>
+               <title>The Famished Road</title>
+               <date>1991</date>
+            </bibl>
+            <bibl>
+               <author>Michael Ondaatje</author>
+               <title>The English Patient</title>
+               <date>1992</date>
+            </bibl>
+            <bibl>
+               <author>Arundhati Roy</author>
+               <title>The God of Small Things</title>
+               <date>1997</date>
+            </bibl>
+            <bibl>
+               <author>Bernice Rubens</author>
+               <title>The Elected Member</title>
+               <date>1970</date>
+            </bibl>
+            <bibl>
+               <author>Salman Rushdie</author>
+               <title>Midnight's Children</title>
+               <date>1981</date>
+            </bibl>
+            <bibl>
+               <author>Paul Scott</author>
+               <title>Staying On</title>
+               <date>1977</date>
+            </bibl>
+            <bibl>
+               <author>David Storey</author>
+               <title>Saville</title>
+               <date>1976</date>
+            </bibl>
+            <bibl>
+               <author>Graham Swift</author>
+               <title>Last Orders</title>
+               <date>1996</date>
+            </bibl>
+            <bibl>
+               <author>Barry Unsworth</author>
+               <title>Sacred Hunger</title>
+               <date>1992</date>
+            </bibl>
+         </listBibl>
+      </body>
+  </text>
+</TEI>

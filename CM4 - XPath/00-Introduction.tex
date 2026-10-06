@@ -1,0 +1,59 @@
+\begin{frame}{Correction encodage extraits \textit{Le crime de l'Orient-express}}
+    
+\end{frame}
+
+\begin{frame}{Utiliser XPath: deux solutions}
+    \begin{itemize}
+        \item \href{https://www.oxygenxml.com/}{Oxygen}: solution payante pour faire de l'encodage en XML TEI, XPath et XSLT
+        \item Extensions VS Code : \textit{XPath Notebook for Visual Studio Code} et \textit{XSLT/XPath for Visual Studio Code}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Installation Oxygen}
+    \href{https://www.oxygenxml.com/xml_editor/download_oxygenxml_editor.html?os=Linux}{Télécharger Oxygen} puis faire une demande pour un essai gratuit de 30 jours.
+\end{frame}
+\begin{frame}{Installation pour utiliser XPath et XSLT dans VSCode}
+    \begin{itemize}
+        \item Installer Node.js: \url{https://nodejs.org/en/download}
+        \item Dans VSCode, aller dans les extensions et installer:\\
+        XPath Notebook for Visual Studio Code\\
+        XSLT/XPath for Visual Studio Code
+        \item Pour ouvrir un Note Book Xpath: ouvrir le fichier XML puis faire: ctrl+shift+p ou shift + pomme + p (pour mac).
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{XPath: définition}
+\begin{itemize}
+    \item \textbf{XPath =} \textit{XML Path Language}
+    \item Langage de requête pour parcourir l'arbre XML
+    \item Repose sur le principe de \textbf{\textcolor{red}{chemin}}
+\end{itemize}
+    
+\end{frame}
+
+\begin{frame}{Exemple}
+\centering
+\includegraphics[width=.9\linewidth]{03 - XPath/poeme_tei.png}
+
+\end{frame}
+
+\begin{frame}{Exemple}
+    \begin{itemize}
+        \item Quel est le titre du poème?\\
+        \textcolor{blue}{\texttt{//title/text()}}
+        \item Combien de strophes?\\
+        \textcolor{blue}{\texttt{count(//lg)}}
+        \item Que contient le deuxième vers de la deuxième strophe?
+        \textcolor{blue}{\texttt{//lg[position()=2]/descendant::l [position()=2]/text()}}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Pourquoi utiliser XPath?}
+\begin{itemize}
+    \item \textbf{Navigation efficace }: XPath permet d'accéder rapidement à des éléments spécifiques d'un document XML sans avoir à parcourir toute la structure.
+\item \textbf{Filtrage précis} : Avec XPath, on peut cibler exactement ce que l'on veut, que ce soit des titres, des chapitres ou des paragraphes.
+\item \textbf{Simplicité }: Même si XML peut être complexe, XPath rend l'extraction d'informations beaucoup plus simple.
+\end{itemize}
+
+\end{frame}
+
