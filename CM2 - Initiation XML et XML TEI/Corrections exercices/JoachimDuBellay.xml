@@ -39,8 +39,8 @@
             <l n="11">Plus que le marbre dur me plaît l'ardoise fine:</l>
         </lg>
         <lg type="tercet" n="2">
-            <l n="12">Plus mon Loire gaulois, que le Tibre latin,</l>
-            <l n="13">Plus mon petit Liré, que le mont Palatin,</l>
+            <l n="12">Plus mon <placeName> Loire gaulois </placeName>, que le <placeName>Tibre latin</placeName>,</l>
+            <l n="13">Plus mon <placeName>petit Liré</placeName>, que le <placeName>mont Palatin</placeName>,</l>
             <l n="14">Et plus que l'air marin la doulceur angevine.</l>
         </lg>
     </body>

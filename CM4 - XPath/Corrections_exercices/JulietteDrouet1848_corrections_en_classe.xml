@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model
+  href="https://vault.tei-c.org/P5/current/xml/tei/custom/schema/relaxng/tei_all.rng"
+  schematypens="http://relaxng.org/ns/structure/1.0"
+  type="application/xml"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" >
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Lettre de Juliette Drouet à Victor Hugo</title>
+                <author>Juliette Drouet</author>
+            </titleStmt>
+            <editionStmt>
+                <p>Transcriptrice: Florence Naugrette</p>
+            </editionStmt>
+            <publicationStmt>
+                <p>Edition dirigée par Florence Naugrette</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Collection particulière</p>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <correspDesc>
+                <correspContext>
+                    <p>Lettre de Juliette Drouet à Victor Hugo</p>
+                </correspContext>
+            </correspDesc>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <opener><date when="1848-02-24">24 février 1848</date>, jeudi matin 8 h 1/2.</opener>
+            <p>Hélas ! mon pauvre adoré, qu’est-ce que tout ceci va devenir ? et quand te verrai-je ? Tu sais qu’on s’est battu une partie de la nuit ? À une heure du matin la fusillade était on ne peut pas plus vive. Il me semble même avoir entendu les cloches et <persName>Suzanne</persName> aussi. Je suis épuisée d’insomnie et d’inquiétude. Quoique tu sois très populaire et justement admiré et adoré de tous, je crains d’affreux hasards et je me tourmente sans pouvoir m’en empêcher. Les rues sont pleines de barricades, la fusillade et le canon s’entrecroisent, les hommes sont entraînés de vive force pour faire les barricades et pour les défendre. Ainsi le menuisier, le serrurier et le boucher de la maison ont été emmenés malgré eux et malgré leurs familles. <persName>M. Bertoni</persName>  (pas clair) dit qu’on ne veut entendre à aucun accommodement, et qu’on proclame la république à tous les carrefours notamment dans le <placeName>quartier Montorgueil</placeName> et <placeName>des Halles</placeName> <note type="footnote" n="2">Juliette habite alors non loin de chez Victor Hugo dans le quartier de <placeName>la Place Royale</placeName> (actuelle <placeName>Place des Vosges</placeName>), près de <placeName>la Bastille</placeName> et du <placeName> faubourg Saint-Antoine</placeName>, qui ne va pas tarder, lui aussi, à s’embraser.</note> . Je ne sais pas ce qu’il y a de vrai dans tous ces on-dit mais ce qui n’est que trop certain c’est le tocsin sonnant à toutes les paroisses et les coups de fusils et de canons sans interruption. Tout cela me navre l’âme et je ne sais plus ce que je fais.
+            <lb/>
+            La pensée que tu es mêlé à cette déplorable affaire et qu’il faut que tu paies de ta présence dans cet horrible tumulte me donne le vertige et il me semble que chaque détonation m’enlève une partie de ma raison <note type="footnote" n="2">Juliette Drouet, d’abord très hostile à la Révolution, et effrayée par le « spectre rouge », se laissera finalement gagner aux idées républicaines.</note> </p>
+            <closer>
+                <salute>Mon <persName >Victor</persName> adoré, mon sublime bien-aimé, sois prudent. Pense que la plus affreuse mort pour moi serait celle qui me viendrait à travers toi. Mon Victor, sois prudent, pense à moi, et ne fais aucune témérité. Je baise tes pieds.</salute>
+                <signed>Juliette</signed>
+            </closer> 
+        </body>
+        <back>
+            <note></note>
+        </back>
+    </text>
+</TEI>
