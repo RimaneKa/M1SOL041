@@ -33,7 +33,7 @@
                 <div style="margin-top: 30px; border-top: 1px solid black;">
                     <h3>Index des lieux :</h3>
                     <ul>
-                        <!-- On boucle sur tous les persName du document -->
+                        <!-- On boucle sur tous les placeName du document -->
                         <xsl:for-each select="distinct-values(//placeName)">
                             <li>
                                 <xsl:value-of select="."/>
@@ -43,13 +43,19 @@
                 </div>
                 
                 <h2>
-                    <xsl:apply-templates select="//text/body/div/head"/>
+                    <xsl:apply-templates select="//text/body/div[@n='1']/head"/>
                 </h2>
                 
-                <h3><xsl:apply-templates select="//text/body/div/div/head"/></h3>
+                <h3><xsl:apply-templates select="//text/body/div/div[@n='1']/head"/></h3>
                 
                 <div>
-                    <xsl:apply-templates select="//text/body/div/div/p"/>
+                    <xsl:apply-templates select="//text/body/div/div[@n='1']/p"/>
+                </div>
+                
+                <h3><xsl:apply-templates select="//text/body/div/div[@n='2']/head"/></h3>
+                
+                <div>
+                    <xsl:apply-templates select="//text/body/div/div[@n='2']/p"/>
                 </div>
                 
             </body>
@@ -65,8 +71,8 @@
         
     </xsl:template>
     
-    <xsl:template match="p/said">
-            <i><xsl:value-of select="."/></i>
+    <xsl:template match="//said">
+            <i><xsl:apply-templates/></i>
     </xsl:template>
     
     <xsl:template match="persName">
@@ -76,6 +82,21 @@
             </font>
         </xsl:if>
     </xsl:template>
+    
+<!--    <xsl:template match="placeName">
+        <xsl:choose>
+            <xsl:when test="@ref='#alep'">
+                <font color="yellow">
+                    <xsl:value-of select="."/>
+                </font>
+            </xsl:when>
+            <xsl:otherwise>
+                <font color="#1D9617">
+                    <xsl:value-of select="."/>
+                </font>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>-->
     
     <xsl:template match="placeName">
         <xsl:choose>
@@ -91,7 +112,6 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
     
     
     

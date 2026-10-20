@@ -84,3 +84,25 @@
     \end{block}
 \end{frame}
 
+\begin{frame}[fragile]{xsl:variable}
+    \begin{block}{\textcolor{blue}{\texttt{<xsl:variable \textcolor{orange}{name="nom\_variable" select="'valeur\_variable'"}/>}}}
+        \begin{itemize}
+            \item Créer une variable dans la feuille de style.
+            \item Utile pour la mise en forme par exemple.
+        \end{itemize}
+    \end{block}
+    \begin{lstlisting}
+        <xsl:variable name="header">
+          <font color="#9acd32"> Title </font>
+        </xsl:variable>
+
+        <xsl:template match="/">
+          <html>
+          <body>
+            <xsl:copy-of select="$header"/>
+          </body>
+          </html>
+        </xsl:template>
+    \end{lstlisting}
+\end{frame}
+

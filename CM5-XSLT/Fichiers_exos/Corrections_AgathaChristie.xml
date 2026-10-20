@@ -160,8 +160,7 @@
 
 
                     <p>
-                        <!-- Bonne utilisation de <said>.  -->
-                        <!-- Les balises <sp> et <speaker> sont réservées plutôt pour l'encodage des dialiogues de théâtre -->
+                       
                         <said who="#general" direct="true"> Mon cher, disait le vieux général d’une
                             voix émue, vous avez éclairci une affaire pénible et évité de graves
                             complications ! Comment vous remercier de votre empressement à répondre
@@ -208,7 +207,7 @@
                 </div>
 
 
-                <!--<div type="chapter" n="2">
+                <div type="chapter" n="2">
 
                     <head>II L’HÔTEL TOKATLIAN</head>
 
@@ -308,7 +307,7 @@
 
                     <gap reason="omitted" extent="paragraphs"/>
 
-                </div>-->
+                </div>
 
             </div>
 
