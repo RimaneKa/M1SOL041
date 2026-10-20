@@ -1,0 +1,144 @@
+\begin{frame}{Définition}
+Langage de transformation pour les documents XML
+    \begin{figure}
+        \centering
+        \includegraphics[width=.7\linewidth]{04 - Traiter des documents XML/schema_xslt_transform.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Utiliser XSLT dans Oxygen}
+\begin{block}{Créer un fichier XSLT}
+    \begin{itemize}
+        \item Ouvrir le fichier \texttt{CM5\_DuBellay.xml}
+        \item Ouvrir un nouveau fichier xsl (taper dans le filtre 'xsl' puis cliquer sur 'XSLT Stylesheet')
+    \end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]{En-tête xslt}
+    \begin{lstlisting}[numbers=none]
+        <?xml version="1.0" encoding="UTF-8"?>
+        <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:math="http://www.w3.org/2005/xpath-functions/math"
+            xmlns:tei="http://www.tei-c.org/ns/1.0"
+            xpath-default-namespace="http://www.tei-c.org/ns/1.0"
+            exclude-result-prefixes="xs math tei"
+            version="3.0">
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Sortie xslt}
+\textcolor{blue}{\texttt{<xsl:output>}}: définie le format de sortie de la transformation XSLT. Se met après l'en-tête XSLT.
+    \begin{lstlisting}
+    <!-- Sortie XML -->
+        <xsl:output method="xml" indent="yes" encoding="UTF-8"/>
+        
+    <!-- Sortie HTML-->
+        <xsl:output method="html" indent="yes" encoding="UTF-8"/>
+
+    <!-- Sortie texte-->
+        <xsl:output method="text" indent="yes" encoding="UTF-8"/>
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Utiliser XSLT dans Oxygen}
+    \begin{block}{Tester des règles et voir ce qui se passe:}
+\begin{lstlisting}[numbers=none]
+
+    <!-- Premier test-->
+        <xsl:template match="/">
+            <xsl:apply-templates/>
+        </xsl:template>
+        
+    <!-- Deuxième test-->
+        <xsl:template match="text()"/>
+
+    <!-- Troisième test-->
+    <xsl:template match="/">
+            <xsl:copy-of select="."/>
+        <xsl:template/>
+        
+    \end{lstlisting}
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Les règles de base de XSL}
+    \begin{block}{\texttt{<xsl:template>}}
+    \begin{itemize}
+        \item Permet de donner les instructions xsl
+        \item Utilise l'attribut \textcolor{orange}{\texttt{@match}} pour sélectionner un élément de l’arbre XML\\
+        \textbf{Exemple:} \texttt{\textcolor{blue}{<xsl:template} \textcolor{orange}{match="TOTO"}\textcolor{blue}{>}}
+        \item On peut ajouter du texte:\\
+            \textcolor{blue}{\texttt{<xsl:template \textcolor{orange}{match="TOTO"}>}}\\
+               \hspace{1cm} Voilà mon élément TOTO\\
+            \textcolor{blue}{\texttt{</xsl:template>}}
+    \end{itemize}
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}[fragile]{Créer un élément}
+    \begin{block}{Méthode 1:}
+    \begin{lstlisting}[numbers=none]
+        <xsl:template match="element">
+            <p> toto </p>
+        </xsl:template>
+    \end{lstlisting}
+    \end{block}
+    
+    \begin{block}{Méthode 2:}
+        \begin{lstlisting}
+            <xsl:template match="element">
+                <xsl:element name="nouveau_element">
+                    tata
+                </xsl:element>
+            </xsl:template>
+        \end{lstlisting}
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}[fragile]{Créer un attribut}
+\begin{block}{Méthode 1:}
+    \begin{lstlisting}
+            <xsl:template match="element">
+                <p type="attribut"> tutu </p>
+            </xsl:template>
+        \end{lstlisting}
+\end{block}
+
+\begin{block}{Méthode 2:}
+    \begin{lstlisting}
+            <xsl:template match="element">
+                <xsl:element name="nouveau_element">
+                    <xsl:attribute name="nouvel_attribut">
+                        <xsl:text>valeur_attribut</xsl:text>
+                    </xsl:attribute>
+                    <xsl:text>Ici, il y avait mon élément</xsl:text>
+                </xsl:element>
+            </xsl:template>
+        \end{lstlisting}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Apply-templates}
+    \textcolor{blue}{\texttt{<xsl:apply-templates>}}: applique le template désigné à tous les éléments ou les enfants de l'élément sélectionné.
+    \begin{block}{Exemple:}
+        \begin{lstlisting}[numbers=none]
+        <!-- On crée un template -->
+            <xsl:template match="head">
+                Title: <span style="color:#ff0000">
+            <xsl:value-of select="."/></span>
+            <br />
+            </xsl:template>
+        <!-- On applique le template -->
+            <xsl:template match="text">
+                <p> <xsl:apply-templates select="head"/> </p>
+            </xsl:template>
+        \end{lstlisting}
+    \end{block}
+\end{frame}

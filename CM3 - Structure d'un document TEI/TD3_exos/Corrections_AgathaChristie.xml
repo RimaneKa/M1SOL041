@@ -208,10 +208,9 @@
                 </div>
 
 
-                <div type="chapter" n="2">
+                <!--<div type="chapter" n="2">
 
                     <head>II L’HÔTEL TOKATLIAN</head>
-â
 
                     <p> À l’ <placeName ref="#tokatlian">hôtel Tokatlian</placeName>, <persName
                             ref="#poirot">Hercule Poirot</persName> demanda une chambre avec salle
@@ -309,7 +308,7 @@
 
                     <gap reason="omitted" extent="paragraphs"/>
 
-                </div>
+                </div>-->
 
             </div>
 

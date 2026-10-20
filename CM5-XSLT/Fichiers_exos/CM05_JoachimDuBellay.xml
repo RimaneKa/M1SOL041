@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Heureux qui, comme Ulysse</title>
+                <author> Joachim du Bellay</author>
+            </titleStmt>
+            <publicationStmt><p/></publicationStmt>
+            <sourceDesc><p/></sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+    <body>
+        <head> 
+            Heureux qui comme Ulysse 
+        </head>
+        
+        <!--<lg type="sonnet">-->
+            <lg type="quatrain">
+                <l>Heureux qui, comme Ulysse, a fait un beau voyage,</l>
+                <l>Ou comme cestuy-là qui conquit la toison, </l>
+                <l>Et puis est retourné, plein d'usage et raison,</l>
+                <l>Vivre entre ses parents le reste de son âge !</l>
+            </lg>
+            <lg type="quatrain">
+                <l>Quand reverrai-je, hélas, de mon petit village</l>
+                <l>Fumer la cheminée, et en quelle saison</l>
+                <l>Reverrai-je le clos de ma pauvre maison</l>
+                <l>Qui m'est une province, et beaucoup davantage ?</l>
+            </lg>
+            
+            <lg type="tercet">
+                <l>Plus me plaît le séjour qu'ont bâti mes aïeux,</l>
+                <l>Que des palais Romains le front audacieux,</l>
+                <l>Plus que le marbre dur me plaît l'ardoise fine:</l>
+            </lg>
+            <lg type="tercet">
+                <l>Plus mon <placeName> Loire gaulois </placeName>, que le <placeName>Tibre latin</placeName>,</l>
+                <l>Plus mon <placeName>petit Liré</placeName>, que le <placeName>mont Palatin</placeName>,</l>
+                <l>Et plus que l'air marin la doulceur angevine.</l>
+            </lg>
+        <!--</lg>-->
+        
+    </body>
+</text>
+</TEI>

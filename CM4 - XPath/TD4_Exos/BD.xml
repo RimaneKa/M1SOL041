@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <listBibl>
+            <bibl n="1" corresp="Tintin">
+               <title>Tintin au pays des Soviets</title>
+               <author>Hergé</author>
+               <date type="month"> septembre</date>
+               <date type="year" when="1930">1930</date>
+            </bibl>
+            <bibl n="2" corresp="Tintin">
+               <title>Tintin au Congo</title>
+               <author>Hergé</author>
+               <date type="month"> juillet </date>
+               <date type="year" when="1931">1931</date>
+            </bibl>
+            <bibl n="3" corresp="Tintin">
+               <title>Tintin en Amérique</title>
+               <author>Hergé</author>
+               <date type="month">novembre</date>
+               <date type="year" when="1932"> 1932 </date>
+            </bibl>
+            <bibl n="4" corresp="Tintin">
+               <title>Les Cigares du Pharaon</title>
+               <author>Hergé</author>
+            </bibl>
+            <bibl n="5" corresp="Tintin">
+               <title>Le Lotus bleu</title>
+               <author>Hergé</author>
+               <date type="month"> septembre</date>
+               <date type="year" when="1936"> 1936 </date>
+            </bibl>
+            <bibl n="6" corresp="Tintin">
+               <title>L'Oreille cassée</title>
+               <author>Hergé</author>
+               <date type="year" when="1937"> 1937 </date>
+            </bibl>
+            <bibl n="7" corresp="Tintin">
+               <title>L'Île Noire</title>
+               <author>Hergé</author>
+               <date type="month"> novembre </date>
+               <date type="year" when="1938">1938</date>
+            </bibl>
+            <bibl n="8" corresp="Tintin">
+               <title>Le Sceptre d'Ottokar</title>
+               <author>Hergé</author>
+               <date type="month"> août  </date>
+               <date type="year" when="1939">1939</date>
+            </bibl>
+            <bibl n="9" corresp="Tintin">
+               <title>Le Crabe aux pinces d'or</title>
+               <author>Hergé</author>
+               <date type="1941" when="1941"> novembre 1941 </date>
+            </bibl>
+            <bibl n="10" corresp="Tintin">
+               <title>L'Étoile mystérieuse</title>
+               <author>Hergé</author>
+               <date when="1942"> décembre 1942 </date>
+            </bibl>
+            <bibl n="11" corresp="Tintin">
+               <title>Le Secret de La Licorne</title>
+               <author>Hergé</author>
+               <date when="1943"> octobre 1943 </date>
+            </bibl>
+            <bibl n="12" corresp="Tintin">
+               <title>Le Trésor de Rackham le Rouge</title>
+               <author>Hergé</author>
+               <date when="1944"> novembre 1944 </date>
+            </bibl>
+            <bibl n="13" corresp="Tintin">
+               <title>Les Sept Boules de cristal</title>
+               <author>Hergé</author>
+               <date when="1948"> septembre 1948 </date>
+            </bibl>
+            <bibl n="14" corresp="Tintin">
+               <title>Le Temple du Soleil</title>
+               <author>Hergé</author>
+               <date when="1949"> septembre 1949 </date>
+            </bibl>
+            <bibl n="15" corresp="Tintin">
+               <title>Tintin au pays de l'or noir</title>
+               <author>Hergé</author>
+               <date when="1950"> décembre 1950 </date>
+            </bibl>
+            <bibl n="16" corresp="Tintin">
+               <title>Objectif Lune</title>
+               <author>Hergé</author>
+               <date when="1953"> septembre 1953 </date>
+            </bibl>
+            <bibl n="17" corresp="Tintin">
+               <title>On a marché sur la Lune</title>
+               <author>Hergé</author>
+               <date when="1954"> août 1954 </date>
+            </bibl>
+            <bibl n="18" corresp="Tintin">
+               <title>L'Affaire Tournesol</title>
+               <author>Hergé</author>
+               <date when="1956"> octobre 1956 </date>
+            </bibl>
+            <bibl n="19" corresp="Tintin">
+               <title>Coke en stock</title>
+               <author>Hergé</author>
+               <date when="1958"> juillet 1958 </date>
+            </bibl>
+            <bibl n="20" corresp="Tintin">
+               <title>Tintin au Tibet</title>
+               <author>Hergé</author>
+               <date when="1960"> janvier 1960 </date>
+            </bibl>
+            <bibl n="21" corresp="Tintin">
+               <title>Les Bijoux de la Castafiore</title>
+               <author>Hergé</author>
+               <date when="1963"> janvier 1963 </date>
+            </bibl>
+            <bibl n="22" corresp="Tintin">
+               <title>Vol 714 pour Sydney</title>
+               <author>Hergé</author>
+               <date when="1968"> janvier 1968 </date>
+            </bibl>
+            <bibl n="23" corresp="Tintin">
+               <title>Tintin et les Picaros</title>
+               <author>Hergé</author>
+               <date when="1976"> janvier 1976 </date>
+            </bibl>
+            <bibl n="24" corresp="Tintin">
+               <author>Hergé</author>
+               <title>Tintin et l'Alph-Art</title>
+               <date when="1986"> octobre 1986 </date>
+            </bibl>
+            <bibl n="1" corresp="Jo, Zette et Jocko ">
+               <author>Hergé</author>
+               <title>Le Manitoba ne répond plus</title>
+               <date when="1952"> janvier 1952 </date>
+            </bibl>
+            <bibl n="2" corresp="Jo, Zette et Jocko ">
+               <author>Hergé</author>
+               <title>L'Eruption du Karamako</title>
+               <date when="1952"> janvier 1952 </date>
+            </bibl>
+            <bibl n="3" corresp="Jo, Zette et Jocko ">
+               <author>Hergé</author>
+               <title>La vallée des cobras</title>
+               <date when="1957"> janvier 1957 </date>
+            </bibl>
+            <bibl n="1" corresp="Astérix">
+               <title>Astérix le Gaulois</title>
+               <date when="1961"> octobre 1961 </date>
+            </bibl>
+            <bibl n="2" corresp="Astérix">
+               <title>La Serpe d'or</title>
+               <date when="1962"> juillet 1962 </date>
+            </bibl>
+            <bibl n="3" corresp="Astérix">
+               <title>Astérix et les Goths</title>
+               <date when="1963"> juillet 1963 </date>
+            </bibl>
+            <bibl n="4" corresp="Astérix">
+               <title>Astérix gladiateur</title>
+               <date when="1964"> juillet 1964 </date>
+            </bibl>
+            <bibl n="5" corresp="Astérix">
+               <title>Le Tour de Gaule d'Astérix</title>
+               <date when="1965"> janvier 1965 </date>
+            </bibl>
+            <bibl n="6" corresp="Astérix">
+               <title>Astérix et Cléopâtre</title>
+               <date when="1965"> juillet 1965 </date>
+            </bibl>
+            <bibl n="7" corresp="Astérix">
+               <title>Le Combat des chefs</title>
+               <date when="1966"> janvier 1966 </date>
+            </bibl>
+            <bibl n="8" corresp="Astérix">
+               <title>Astérix chez les Bretons</title>
+               <date when="1966"> juillet 1966 </date>
+            </bibl>
+            <bibl n="9" corresp="Astérix">
+               <title>Astérix et les Normands</title>
+               <date when="1966"> octobre 1966 </date>
+            </bibl>
+            <bibl n="10" corresp="Astérix">
+               <title>Astérix Légionnaire</title>
+               <date when="1967"> juillet 1967 </date>
+            </bibl>
+            <bibl n="11" corresp="Astérix">
+               <title>Le bouclier Arverne</title>
+               <author>Goscinny</author>
+               <author>Uderzo</author>
+               <date when="1968"> janvier 1968 </date>
+            </bibl>
+            <bibl n="12" corresp="Astérix">
+               <title>Astérix aux Jeux Olympiques</title>
+               <date when="1968"> juillet 1968 </date>
+            </bibl>
+            <bibl n="13" corresp="Astérix">
+               <title>Astérix et le chaudron</title>
+               <author>Goscinny</author>
+               <author>Uderzo</author>
+               <date when="1969"> janvier 1969 </date>
+            </bibl>
+            <bibl n="14" corresp="Astérix">
+               <title>Astérix en Hispanie</title>
+               <date when="1969"> octobre 1969 </date>
+            </bibl>
+            <bibl n="15" corresp="Astérix">
+               <title>La zizanie</title>
+               <date when="1970"> avril 1970 </date>
+            </bibl>
+            <bibl n="16" corresp="Astérix">
+               <title>Astérix chez les Helvètes</title>
+               <author>Goscinny</author>
+               <author>Uderzo</author>
+               <date when="1970"> octobre 1970 </date>
+            </bibl>
+            <bibl n="17" corresp="Astérix">
+               <title>Le domaine des dieux</title>
+               <date when="1971"> octobre 1971 </date>
+            </bibl>
+            <bibl n="18" corresp="Astérix">
+               <title>Les lauriers de César</title>
+               <date when="1972"> janvier 1972 </date>
+            </bibl>
+            <bibl n="19" corresp="Astérix">
+               <title>Le Devin</title>
+               <date when="1972"> octobre 1972 </date>
+            </bibl>
+            <bibl n="20" corresp="Astérix">
+               <title>Astérix en Corse</title>
+               <date when="1973"> avril 1973 </date>
+            </bibl>
+            <bibl n="21" corresp="Astérix">
+               <title>Le cadeau de César</title>
+               <date when="1974"> juillet 1974 </date>
+            </bibl>
+            <bibl n="22" corresp="Astérix">
+               <title>La grande traversée</title>
+               <date when="1975"> avril 1975 </date>
+            </bibl>
+            <bibl n="23" corresp="Astérix">
+               <title>Obélix et compagnie</title>
+               <date when="1976"> avril 1976 </date>
+            </bibl>
+            <bibl n="24" corresp="Astérix">
+               <title>Astérix chez les Belges</title>
+               <date when="1979"> janvier 1979 </date>
+            </bibl>
+            <bibl n="25" corresp="Astérix">
+               <title>Le Grand Fossé</title>
+               <date when="1980"> avril 1980 </date>
+            </bibl>
+            <bibl n="26" corresp="Astérix">
+               <title>L'odyssée d'Astérix</title>
+               <date when="1981"> octobre 1981 </date>
+            </bibl>
+            <bibl n="27" corresp="Astérix">
+               <title>Le fils d'Astérix</title>
+               <date when="1983"> octobre 1983 </date>
+            </bibl>
+            <bibl n="28" corresp="Astérix">
+               <title>Astérix chez Rahàzade</title>
+               <date when="1987"> octobre 1987 </date>
+            </bibl>
+            <bibl n="29" corresp="Astérix">
+               <title>La rose et le glaive</title>
+               <date when="1991"> octobre 1991 </date>
+            </bibl>
+            <bibl n="30" corresp="Astérix">
+               <title>La galère d'Obélix</title>
+               <date type="month"> juillet  </date>
+               <date type="year" when="1996">1996</date>
+            </bibl>
+            <bibl n="31" corresp="Astérix">
+               <title>Astérix et Latraviata</title>
+               <date when="2001"> mars 2001 </date>
+            </bibl>
+            <bibl n="33" corresp="Astérix">
+               <title>Le ciel lui tombe sur la tête</title>
+               <date when="2005"> octobre 2005 </date>
+            </bibl>
+            <bibl n="34" corresp="Astérix">
+               <title>L'Anniversaire d'Astérix et Obélix</title>
+               <date when="2009"> octobre 2009 </date>
+            </bibl>
+            <bibl n="35" corresp="Astérix">
+               <title>Astérix chez les Pictes</title>
+               <date when="2013"> octobre 2013 </date>
+            </bibl>
+            <bibl n="36" corresp="Astérix">
+               <title>Le papyrus de César</title>
+               <date when="2015"> octobre 2015 </date>
+            </bibl>
+            <bibl n="37" corresp="Astérix">
+               <title>Astérix et la Transitalique</title>
+               <date when="2017"> octobre 2017 </date>
+            </bibl>
+            <bibl n="38" corresp="Astérix">
+               <title>La Fille de Vercingétorix</title>
+               <date when="2019"> octobre 2019 </date>
+            </bibl>
+            <bibl n="39" corresp="Astérix">
+               <title>Astérix et le Griffon</title>
+               <date when="2021"> octobre 2021 </date>
+            </bibl>
+         </listBibl>
+      </body>
+   </text>
+</TEI>

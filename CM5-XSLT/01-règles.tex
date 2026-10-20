@@ -1,0 +1,63 @@
+\begin{frame}{copy et copy-of}
+    \begin{block}{\textcolor{blue}{\texttt{<xsl:copy>}}}
+    \begin{itemize}
+        \item Copie que le noeud courant\\
+        \textcolor{blue}{\texttt{<xsl:template \textcolor{orange}{match="body"}>}}\\
+        \textcolor{blue}{<xsl:copy/>}\\
+        \textcolor{blue}{</xsl:template>}
+        
+    \end{itemize}
+    \end{block}
+
+    \begin{block}{\textcolor{blue}{\texttt{<xsl:copy-of>}}}
+        \begin{itemize}
+            \item Copie le noeud courant et ses enfants:\\
+            \textcolor{blue}{\texttt{<xsl:template \textcolor{orange}{match="body"}>}}\\
+        \textcolor{blue}{<xsl:copy-of \textcolor{orange}{select="lg"}/>}\\
+        \textcolor{blue}{</xsl:template>}
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}[fragile]{value-of}
+    \begin{block}{\textcolor{blue}{\texttt{<xsl:value-of>}}}
+    \begin{itemize}
+        \item Permet d'extraire la valeur d'un élément.\\
+        \begin{lstlisting}[numbers=none]
+            <xsl:template match="lg">
+                <xsl:value-of select="."/>
+            </xsl:template>
+        \end{lstlisting}    
+    \end{itemize}
+        
+    \end{block}
+\end{frame}
+
+\begin{frame}[fragile]{number}
+    \begin{block}{\textcolor{blue}{\texttt{<xsl:number>}}}
+        \begin{itemize}
+            \item Permet de produire un nombre dans l'arbre de résultat.
+            \item Possède plusieurs attributs~:
+            \begin{itemize}
+                \item \textcolor{orange}{\texttt{@count}}: spécifier les noeuds à compter;
+                \item \textcolor{orange}{\texttt{@level}}: spécifier le nombre de niveaux
+                \begin{itemize}
+                    \item \texttt{\textbf{any}}: compte le nombre de noeuds.
+                    \item \texttt{\textbf{single}}: compte le nombre de noeuds descendants d'un même parent
+                    \item \texttt{\textbf{multiple}}: compte tous les noeuds descendants mais aussi les "siblings" et leur descendant.
+                \end{itemize}
+                \item \textcolor{orange}{\texttt{@format}}: spécifier le format de numérotation.
+            \end{itemize}
+        \end{itemize}
+        \begin{lstlisting}[numbers=none]
+        <xsl:template match="mon_element_xml">
+            <xsl:number count="element_a_compter" level="" format=""/>
+        </xsl:template>
+    \end{lstlisting}
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}[fragile]{Exercice}
+    \url{https://pad.libreon.fr/p9wWZK-ETAu6XIyAmOGjGg}
+\end{frame}

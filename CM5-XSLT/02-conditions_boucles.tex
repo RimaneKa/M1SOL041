@@ -1,0 +1,86 @@
+\begin{frame}[fragile]{xsl:if}
+    \begin{block}{\textcolor{blue}{\texttt{<xsl:if \textcolor{orange}{test="chemin\_xpath"}>}}}
+    \begin{itemize}
+        \item Une condition qui applique les règles si \textcolor{orange}{\texttt{@test}} est vraie.
+    \end{itemize}
+    \begin{lstlisting}[numbers=none]
+        <xsl:template match="body">
+            <xsl:if test="lg[@type='sonnet']">
+                <xsl:copy-of select="."/>
+            </xsl:if>
+        </xsl:template>
+    \end{lstlisting}
+        
+    \end{block}
+\end{frame}
+
+\begin{frame}[fragile]{xsl:choose, xsl:when, xsl:otherwise}
+    \begin{block}{\textcolor{blue}{\texttt{<xsl:choose>}}}
+        \begin{itemize}
+            \item Est utilisé avec au moins un élément \textcolor{blue}{\texttt{<xsl:when>}}, et en option un élément \textcolor{blue}{\texttt{<xsl:otherwise>}} pour exprimer plusieurs conditions / sélectionner une possibilité dans une liste de choix
+        \end{itemize}
+    
+        \begin{lstlisting}[numbers=none]
+            <xsl:template match="l">
+                <xsl:choose>
+                    <xsl:when test="placeName">
+                       <xsl:text>LIEU</xsl:text>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:text>PAS DE LIEU</xsl:text>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:template>
+        \end{lstlisting}
+        
+    \end{block}
+\end{frame}
+
+\begin{frame}[fragile]{xsl:for-each, xsl:sort, xsl:for-each-group}
+    \begin{block}{\textcolor{blue}{\texttt{<xsl:for-each>}}}
+        \begin{itemize}
+            \item Itère sur les noeuds sélectionnés par l'\textcolor{orange}{@select} et applique les règles à chacun des éléments du noeud.
+        \end{itemize}
+
+        \begin{lstlisting}
+            <xsl:template match="l">
+                <xsl:for-each select="placeName">
+                    <xsl:text> TOTO </xsl:text>
+                </xsl:for-each>
+            </xsl:template>
+        \end{lstlisting}
+    \end{block}
+\end{frame}
+
+\begin{frame}[fragile]{xsl:for-each, xsl:sort, xsl:for-each-group}
+    \begin{block}{\textcolor{blue}{\texttt{<xsl:sort>}}}
+        \begin{itemize}
+            \item Permet de changer l'ordre des noeuds avec les attributs suivants:
+            \begin{itemize}
+                \item \textcolor{orange}{@select}: objet du tri
+                \item \textcolor{orange}{@data-type}: par défaut est alphabétique, mais on peut mettre "number"
+                \item \textcolor{orange}{@order}: par défaut "ascending"
+                \item \textcolor{orange}{@case-order}: indique si ce sont les minuscules ou les majuscules qui apparaîtront en premier.
+            \end{itemize}
+        \end{itemize}
+        \begin{lstlisting}[numbers=none]
+            <xsl:template match="element">
+                <xsl:for-each select="souselements">
+                    <xsl:sort select="tri" order='ascending|descending'/>
+                    <xsl:copy-of select="."/>
+                </xsl:for-each>
+            </xsl:template>
+        \end{lstlisting}
+    \end{block}
+\end{frame}
+
+\begin{frame}[fragile]{xsl:for-each, xsl:sort, xsl:for-each-group}
+    \begin{block}{\textcolor{blue}{\texttt{<xsl:for-each-group>}}}
+        \begin{itemize}
+            \item Itère sur les groupes de noeuds sélectionnés par \textcolor{orange}{\texttt{@select}} et applique la règle à chacun d'entre eux
+            \item \textcolor{orange}{\texttt{@group-by}} permet de rassembler les noeuds sélectionnés en sous-groupes.
+        \end{itemize}
+        
+    \end{block}
+\end{frame}
+
